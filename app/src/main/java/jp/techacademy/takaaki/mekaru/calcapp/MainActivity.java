@@ -2,6 +2,7 @@ package jp.techacademy.takaaki.mekaru.calcapp;
 
 import android.content.Intent;
 import android.os.Message;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -11,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import static java.lang.Double.doubleToLongBits;
 import static java.lang.Double.parseDouble;
 
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String result;
 
         if (str1.equals("") || str2.equals("")) {
-            Toast.makeText(this, "数値を入力してください", Toast.LENGTH_SHORT).show();
+            Snackbar.make(view, "数値を入力してください。", Snackbar.LENGTH_SHORT).show();
             return;
         }
 
